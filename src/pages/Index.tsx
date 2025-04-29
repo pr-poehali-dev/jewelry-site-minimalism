@@ -1,12 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from "react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import FeaturedProducts from "@/components/FeaturedProducts";
+import Collections from "@/components/Collections";
+import Features from "@/components/Features";
+import Footer from "@/components/Footer";
 
 const Index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
+    <div className="bg-jewelry-cream min-h-screen">
+      <Navbar />
+      <main>
+        <Hero />
+        <FeaturedProducts />
+        <Collections />
+        <Features />
+      </main>
+      <Footer />
     </div>
   );
 };
